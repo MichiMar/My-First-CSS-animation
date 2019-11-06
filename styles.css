@@ -1,0 +1,99 @@
+body {
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.sky {
+  background-color: skyblue;
+  height: 35vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.grass {
+  background-color: forestgreen;
+  height: 26.8vh;
+}
+
+.road-bounds {
+  background-color: #666;
+  height: 1.6vw;
+}
+
+.road {
+  background-color: #444;
+  height: 35vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.line {
+  width: 100vw;
+  border-bottom: 1.4vh dashed white;
+  animation: middle-line 2s linear infinite;
+}
+
+img {
+  height: 35%;
+  width: auto;
+  margin: 1%;
+}
+
+.cloud {
+  animation: wind 15s linear infinite;
+}
+.mario {
+  animation: drive 5s linear infinite;
+}
+
+.luigi {
+  animation: drive 10s linear infinite;
+}
+
+/* active = click */
+/* .mario:hover {
+  transform: translate(200px, 100px);
+  transform: rotate(1360deg);
+} */
+
+@keyframes drive {
+  0% {
+    transform: translateX(-25vw);
+  }
+  50% {
+    transform: translatez(10vh, 25vh);
+  }
+  100% {
+    transform: translateX(130vw);
+  }
+}
+
+@keyframes wind {
+  from {
+    transform: translateX(35vw);
+  }
+  to {
+    transform: translateX(-155vw);
+  }
+}
+
+@keyframes middle-line {
+  from {
+    transform: translateX(10vw);
+  }
+  to {
+    transform: translateX(-1vw);
+  }
+}
